@@ -10,9 +10,7 @@ uses
 
 var
   Auto : TCar;
-  a,v,t : real;
-  x : string;
-  str: string;
+  a,v,t : integer;
 begin
   try
     Auto := TCar.Create(225, SixSpeed, FiveDoors, 'Honda', 'Red', 'Japan', true);   // Почему если тру то -1?
@@ -24,24 +22,12 @@ begin
     else
       Writeln('Двигатель выключен');
     Writeln('Максимальная скорость: ' +  IntToStr(Auto.MaxSpeedCar));
-    Write('Для рассчета изменения скорости введите время(в секундах): ');
-    Readln(t);
+    Write('Для рассчета изменения скорости введите время: ');
+  //  Readln(t);
     a := 5;
+    t := 5;
     v := (a / t) ;
-    Writeln('Разность скоростей между конечной и начальной: ' + FloatToStr(v));
-    Writeln('Хотите ввести новые данные? Yes or No');
-    Readln(x);
-    if x = 'yes' then
-      Write('Введите Марку: ');
-      Readln(str);
-      Auto.SetName(str);
-      Write('Введите Цвет:');
-      Readln(str);
-      Auto.SetColor(str);
-      Write('Введите страну: ');
-      Readln(str);
-      Auto.SetCounty(str);
-      Writeln('Данные введены');
+    Writeln('Разность скоростей между конечной и начальной: ' + inttostr(v) );
     Readln;
   except
     on E: Exception do

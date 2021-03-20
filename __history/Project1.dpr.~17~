@@ -1,0 +1,29 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  Unit1 in 'Unit1.pas';
+
+var
+  Auto : TCar;
+  a,b,c : integer;
+begin
+  try
+    Auto := TCar.Create(225, SixSpeed, FiveDoors, 'Honda', 'Red', 'Japan', true);   // Почему если тру то -1?
+    Writeln('Марка: ' +  Auto.NameCar);
+    Writeln('Цвет: ' +  Auto.ColorCar);
+    Writeln('Страна: ' +  Auto.CountryCar);
+    Writeln('Заведенный ли двигатель: ' +  BoolToStr(Auto.EngineStart),true);
+    Writeln('Максимальная скорость: ' +  IntToStr(Auto.MaxSpeedCar));
+    Readln(a);
+    Writeln('');
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
