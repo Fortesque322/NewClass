@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021.03.20 13:53:12.385,=C:\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.03.20 14:36:58.276,C:\Test\NewClass\Unit1.pas=C:\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.03.20 14:37:01.857,C:\Test\NewClass\Project1.dproj=C:\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
