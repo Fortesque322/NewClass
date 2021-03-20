@@ -3,10 +3,10 @@ unit Unit1;
 
 interface
   type
-  TTransmission = array [1..6] of integer;
-  TDoors = (ThreeDoors, FiveDoors);
-  TCar = class
-    strict private
+    TTransmission = array [1..6] of integer;
+    TDoors = (ThreeDoors, FiveDoors);
+    TCar = class
+  strict private
       FName : string;
       FColor : string;
       FCountry : string;
@@ -23,7 +23,7 @@ interface
     function GetStartEngine: boolean;
     function GetTrans: TTransmission;
   public
-    constructor Create(Transmission : TTransmission; Doors : TDoors; Name, Color, County:string; Engine : boolean);
+    constructor Create(Speed : integer; Transmission : TTransmission; Doors : TDoors; Name, Color, Country:string; Engine : boolean);
     destructor Destroy;
     property NameCar : string read GetName write FName;
     property ColorCar : string read GetColor write Fcolor;
@@ -32,18 +32,28 @@ interface
     property MaxSpeedCar : integer read GetSpeed write FMaxSpeed;
     property Doors: TDoors read GetDoors write FDoors;
     property Transmission : TTransmission read GetTrans write FTransmission;
+    procedure SetName (Name : string);
+    procedure SetColor (Color : string);
+    procedure SetCounty (County : string);
+    procedure SetEngine (Engine : boolean);
+    procedure SetSpeed (Speed : integer);
+    procedure SetDoors (Doors : TDoors);
+    procedure SetTrans (Transmission : TTransmission);
   end;
 
 implementation
-
-
-
 { TCar }
 
-constructor TCar.Create;
-begin
-
-end;
+constructor TCar.Create(Speed: integer; Transmission : TTransmission; Doors : TDoors; Name, Color, Country:string; Engine : boolean);
+  begin
+    FName := Name;
+    FColor := Color;
+    FCountry := Country;
+    FEngineStart := Engine;
+    FMaxSpeed := Speed;
+    FTransmission := Transmission;
+    FDoors := Doors;
+  end;
 
 destructor TCar.Destroy;
 begin
@@ -84,5 +94,40 @@ function TCar.GetTrans: TTransmission;
 begin
   Result := FTransmission;
 end;
+
+procedure TCar.SetColor(Color: string);
+  begin
+    FColor := Color;
+  end;
+
+procedure TCar.SetCounty(County: string);
+  begin
+    FCountry := County;
+  end;
+
+procedure TCar.SetDoors(Doors: TDoors);
+  begin
+    FDoors := Doors;
+  end;
+
+procedure TCar.SetEngine(Engine: boolean);
+  begin
+    FEngineStart := Engine;
+  end;
+
+procedure TCar.SetName(Name: string);
+  begin
+    FName := Name;
+  end;
+
+procedure TCar.SetSpeed(Speed: integer);
+  begin
+    FMaxSpeed := Speed;
+  end;
+
+procedure TCar.SetTrans(Transmission: TTransmission);
+  begin
+    FTransmission := Transmission;
+  end;
 
 end.

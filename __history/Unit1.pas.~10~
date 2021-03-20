@@ -3,24 +3,24 @@ unit Unit1;
 
 interface
   type
-    TTransmission = (FiveSpeep,SixSpeed);  // ак передать массив в параметры конструктора
+    TTransmission = array [1..6] of integer;
     TDoors = (ThreeDoors, FiveDoors);
     TCar = class
   strict private
-    FName : string;
-    FColor : string;
-    FCountry : string;
-    FEngineStart : boolean;
-    FMaxSpeed : integer;
-    FDoors : TDoors;
-    FTransmission : TTransmission;
-    function GetColor: string;
-    function GetCountry: string;
-    function GetDoors: TDoors;
-    function GetName: string;
-    function GetSpeed: integer;
-    function GetStartEngine: boolean;
-    function GetTrans: TTransmission;
+      FName : string;
+      FColor : string;
+      FCountry : string;
+      FEngineStart : boolean;
+      FMaxSpeed : integer;
+      FDoors : TDoors;
+      FTransmission : TTransmission;
+      function GetColor: string;
+      function GetCountry: string;
+      function GetDoors: TDoors;
+      function GetName: string;
+      function GetSpeed: integer;
+      function GetStartEngine: boolean;
+      function GetTrans: TTransmission;
   public
     constructor Create(Speed : integer; Transmission : TTransmission; Doors : TDoors; Name, Color, Country:string; Engine : boolean);
     destructor Destroy;

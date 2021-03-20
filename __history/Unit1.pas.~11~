@@ -3,7 +3,7 @@ unit Unit1;
 
 interface
   type
-    TTransmission = (FiveSpeep,SixSpeed);  // ак передать массив в параметры конструктора
+    TTransmission = array [1..6] of integer;
     TDoors = (ThreeDoors, FiveDoors);
     TCar = class
   strict private

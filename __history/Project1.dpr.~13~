@@ -13,7 +13,7 @@ var
 
 begin
   try
-    Auto := TCar.Create(225, SixSpeed, FiveDoors, 'Honda', 'Red', 'Japan', true);   // Почему если тру то -1?
+    Auto := TCar.Create(255, SixSpeed, FiveDoors, 'Honda', 'Red', 'Japan', false);
     Writeln('Марка: ' +  Auto.NameCar);
     Writeln('Цвет: ' +  Auto.ColorCar);
     Writeln('Страна: ' +  Auto.CountryCar);
