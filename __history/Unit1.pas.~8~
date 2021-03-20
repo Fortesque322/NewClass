@@ -3,10 +3,10 @@ unit Unit1;
 
 interface
   type
-    TTransmission = array [1..6] of integer;
-    TDoors = (ThreeDoors, FiveDoors);
-    TCar = class
-  strict private
+  TTransmission = array [1..6] of integer;
+  TDoors = (ThreeDoors, FiveDoors);
+  TCar = class
+    strict private
       FName : string;
       FColor : string;
       FCountry : string;

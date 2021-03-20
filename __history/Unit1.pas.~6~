@@ -3,10 +3,10 @@ unit Unit1;
 
 interface
   type
-    TTransmission = array [1..6] of integer;
-    TDoors = (ThreeDoors, FiveDoors);
-    TCar = class
-  strict private
+  TTransmission = array [1..6] of integer;
+  TDoors = (ThreeDoors, FiveDoors);
+  TCar = class
+    strict private
       FName : string;
       FColor : string;
       FCountry : string;
@@ -42,6 +42,9 @@ interface
   end;
 
 implementation
+
+
+
 { TCar }
 
 constructor TCar.Create(Speed: integer; Transmission : TTransmission; Doors : TDoors; Name, Color, Country:string; Engine : boolean);
@@ -96,38 +99,38 @@ begin
 end;
 
 procedure TCar.SetColor(Color: string);
-  begin
-    FColor := Color;
-  end;
+begin
+
+end;
 
 procedure TCar.SetCounty(County: string);
-  begin
-    FCountry := County;
-  end;
+begin
+
+end;
 
 procedure TCar.SetDoors(Doors: TDoors);
-  begin
-    FDoors := Doors;
-  end;
+begin
+
+end;
 
 procedure TCar.SetEngine(Engine: boolean);
-  begin
-    FEngineStart := Engine;
-  end;
+begin
+
+end;
 
 procedure TCar.SetName(Name: string);
-  begin
-    FName := Name;
-  end;
+begin
+
+end;
 
 procedure TCar.SetSpeed(Speed: integer);
-  begin
-    FMaxSpeed := Speed;
-  end;
+begin
+
+end;
 
 procedure TCar.SetTrans(Transmission: TTransmission);
-  begin
-    FTransmission := Transmission;
-  end;
+begin
+
+end;
 
 end.
