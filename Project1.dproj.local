@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.276,C:\Projects\Unit1.pas=C:\Test\NewClass\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.385,=C:\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.857,C:\Projects\Project1.dproj=C:\Test\NewClass\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.276,C:\Test\NewClass\Unit1.pas=C:\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.857,C:\Test\NewClass\Project1.dproj=C:\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
